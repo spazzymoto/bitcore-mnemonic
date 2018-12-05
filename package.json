@@ -40,10 +40,10 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "particl-bitcore-lib": "git://github.com/particl/particl-bitcore-lib.git",
+    "particl-bitcore-lib": "git://github.com/spazzymoto/particl-bitcore-lib.git#update-from-bitpay",
     "unorm": "^1.4.1"
   },
   "peerDependencies": {
-    "particl-bitcore-lib": "git://github.com/particl/particl-bitcore-lib.git"
+    "particl-bitcore-lib": "git://github.com/spazzymoto/particl-bitcore-lib.git#update-from-bitpay"
   }
 }
