@@ -16,13 +16,13 @@ var spec = {
   }]
 };
 
-module.exports = require('particl-bitcore-lib').errors.extend(spec);
+module.exports = require('bitcore-lib').errors.extend(spec);
 
 },{"bitcore-lib":"bitcore-lib"}],2:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var bitcore = require('particl-bitcore-lib');
+var bitcore = require('bitcore-lib');
 var BN = bitcore.crypto.BN;
 var unorm = require('unorm');
 var _ = bitcore.deps._;
