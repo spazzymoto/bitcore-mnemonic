@@ -40,6 +40,8 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
+    "bitcore-lib": "^0.16.0",
+    "bitcore-lib-cash": "^0.19.0",
     "bitcore-lib-particl": "git://github.com/spazzymoto/bitcore-lib-particl.git",
     "unorm": "^1.4.1"
   },
