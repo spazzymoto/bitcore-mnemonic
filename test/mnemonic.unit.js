@@ -4,7 +4,7 @@ var chai = require('chai');
 var should = chai.should();
 
 var Mnemonic = require('..');
-var errors = require('particl-bitcore-lib').errors;
+var errors = require('bitcore-lib').errors;
 var bip39_vectors = require('./data/fixtures.json');
 
 describe('Mnemonic', function() {
@@ -83,6 +83,11 @@ describe('Mnemonic', function() {
     it('japanese wordlist is complete', function() {
       Mnemonic.Words.JAPANESE.length.should.equal(2048);
       Mnemonic.Words.JAPANESE[0].should.equal('あいこくしん');
+    });
+
+    it('korean wordlist is complete', function() {
+      Mnemonic.Words.KOREAN.length.should.equal(2048);
+      Mnemonic.Words.KOREAN[0].should.equal('가격');
     });
 
     it('chinese wordlist is complete', function() {
@@ -173,6 +178,12 @@ describe('Mnemonic', function() {
     it('Mnemonic.fromSeed should fail with invalid seed', function() {
       (function() {
         return Mnemonic.fromSeed();
+      }).should.throw(errors.InvalidArgument);
+    });
+
+    it('should fail with invalid entropy', function() {
+      (function() {
+        return Mnemonic.fromSeed(Buffer.alloc(512), Mnemonic.Words.ENGLISH);
       }).should.throw(errors.InvalidArgument);
     });
 
